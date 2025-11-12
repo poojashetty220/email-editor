@@ -1,0 +1,12 @@
+[build]
+  # Base directory for the build (where package.json is located)
+  base = "demo"
+  # Build command - using pnpm since demo has pnpm-lock.yaml
+  command = "corepack enable && corepack prepare pnpm@latest --activate && pnpm install && pnpm run build"
+  # Publish directory (Vite default output)
+  publish = "demo/dist"
+
+[build.environment]
+  # Node version will be read from .nvmrc
+  NODE_VERSION = "20"
+
